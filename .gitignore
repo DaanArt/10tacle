@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Training artefacts — these get very large.
+# The spec (§6) calls for a persistent replay buffer retained indefinitely;
+# it does not belong in git. Back it up separately.
+runs/
+logs/
+checkpoints/
+data/
+replay/
+*.ckpt
+*.pt
+*.pth
+wandb/
+
+# Recorded media from the trunk camera / room sensors
+recordings/
+*.mp4
+*.mkv
+
+# Hardware calibration output is worth keeping — do NOT ignore:
+#   calibration/spring_curve_*.csv  (milestone 0 deliverable 1)
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.swp
