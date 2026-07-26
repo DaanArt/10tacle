@@ -61,9 +61,13 @@ interiority** (the printed/projected LLM monologue); **gallery-grade reliability
 
 ## 6. Housekeeping
 
-- **No git remote.** No `gh` CLI, no SSH keys, no credential helper on this machine, so nothing
-  can be pushed yet. Repo identity is set per-repo to `DaanArt <125995@gmail.com>`; global
-  config (`DaanBio <daan@vandervorm.com>`) deliberately untouched.
+- **Remote:** `origin` → https://github.com/DaanArt/10tacle.git, `main` tracking `origin/main`.
+  Auth works via Git Credential Manager (`manager-core`, system-level). No `gh` CLI and no SSH
+  keys on this machine, so GitHub API operations (PRs, issues) aren't available from the
+  terminal — only push/fetch.
+- Repo identity is set **per-repo** to `DaanArt <125995@gmail.com>`; global config
+  (`DaanBio <daan@vandervorm.com>`) deliberately untouched. Check `git config user.email` before
+  committing if you ever clone this elsewhere — the per-repo setting won't follow.
 - `.gitignore` excludes replay buffers, checkpoints and recordings. The replay buffer is
   supposed to persist indefinitely (§6) — **it needs a backup route that isn't git.**
 - Calibration output (`calibration/spring_curve_*.csv`) is deliberately *not* ignored.
